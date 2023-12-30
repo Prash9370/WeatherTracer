@@ -2,7 +2,7 @@ let wdata = {};
 function getData(location) {
     if (location != "") {
 
-        fetch("http://api.weatherapi.com/v1/current.json?key=53cf5e773aac4ac7a7975920233012&q=" + location + "&aqi=no")
+        fetch("https://api.weatherapi.com/v1/current.json?key=53cf5e773aac4ac7a7975920233012&q=" + location + "&aqi=no")
             .then(response => response.json())
             .then((json) => {
                 wdata = json;
