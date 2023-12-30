@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
+    <script src="./weather.js"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <header>
+        <h1>WeatherTracer</h1>
+        <img src="./Weather.png" alt="" id="weatherimg2">
+    </header>
+    <main>
+        <img src="./Weather.png" alt="" id="weatherimg">
+        <h1 class="tophead"> Specify A Location To Get Weather Data</h1>
+        <br>
+        <div>
+            <input type="text" placeholder="Enter Location" id="Location" onkeydown="iptsearch(event,this.value)"/>
+            <button onclick="getData(document.getElementById('Location').value)">Get Weather Data</button>
+        </div>
+        <br>
+        <div class="weatherdt">
+            <h1 id="loctitle">Loading...</h1>
+            (<span id="lt">Loading...</span>,
+            <span id="lg"> Loading...</span>)
+            <br>
+            <h3 id="reg">Loading...</h3>
+            <h3 id="country">Loading...</h3>
+            <br>
+
+            <span class="bold">Date Time : </span>
+            <span id="date">Loading...</span>
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="bold">Day/Night : </span>
+            <span id="DorN">Loading...</span>
+            <br>
+            <br>
+            <div class="wspro">
+                <h3 class="bold">Weather Status</h3>
+                <div class="ws">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAMFBMVEX19fXMzMzJycnx8fH4+PjZ2dnS0tLd3d3h4eHGxsbW1tbPz8/u7u7k5OTn5+fr6+tjq/wKAAACeklEQVR4nO3a23KCMBRA0ZCcQExA//9vS1CQayvw4NHu9dDpWGXYjZIgGAMAAAAAAAAAAAAAAAAAAAAAAAAAALbUTSwPi4179/6PXZM9Jd3k3Qk9qZMtTrGlmhqJJ1vamqglxlza3Um+OsinnPPuhgdxeWCCcQeZkIfG6RiaHJOK5vDOSJNSKpyoqOlH5jBdI3MZx8jw41V6Y1zjY6yue6ZBtTHXdGnfdNb6HTVKY6Sxtp8G65c3oDTGFcP0af3LG9AZI75Iw6T++npLaUyb8KwJnx3jJuutSlaO0CEujwwqY+TvmNAuKRcbUBljzGT1vFwTSJOP2+X8YZ0x4sc1t8Uzg81HO5vmD+uMqUcxfvke6+eg2TtNaYyE9Jw053sXnnPQ9CigNUauZZFP6gu/bHlOqG3N+M9qY6TuFpqNmZ+ehMmRblKjNOb+gFtZZE5bpjWqY1bMW1rPms+KkZWWtqbff/0x499XW1IRH0/SHzNaZoaNr9X6I7T6mNIOq5mtlnZs7isb5THOF8PaLNjNmGTL/BLdMS7mk7TU1YTLRko3NLZ7iuIYcY/1Zq5Z/eyPPjb5BZpjaj/850P1e0sbI6pj3OiaQNqs+IwYt+v6hvIY/9f+f0yMmLirRXOMMXuvByqO2X89UG/M/ULN18TsbVEd81UjQ8z3xDitMe1pzG6iNkb2yxvQGnNoA7piupsaTtyhoS6mOnrrjKsrRTFGckyKR5XdYU1Ji5Eqf2iO3weYX1xpiTGuPHsnYNTyLstXzMpTt2jmL9F13KFl8umyu1X7J8xedXPdHPXujLtu9ju5L2piAAAAAAAAAAAAAAAAAAAAAAAAAOD/+gEKuR+t0/LxHAAAAABJRU5ErkJggg=="
+                        alt="img" id="cdimg">
+                    <span id="condition">Loading...</span>
+                </div>
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <th>Wind Speed</th>
+                    <th>Rain</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                </tr>
+                <tr>
+                    <td><span id="Wind">Loading...</span>
+                        <span>kph</span>
+                    </td>
+                    <td>
+                        <span id="rain">Loading...</span>
+                        <span>mm</span>
+                    </td>
+                    <td>
+                        <span id="temp">Loading...</span>
+                        <span>°C</span>
+                    </td>
+                    <td>
+                        <span id="humidity">Loading...</span>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+    </main>
+    <footer>
+        &copy; 2023 Weather App (Prashant Shinde)
+    </footer>
+</body>
+
+</html>
